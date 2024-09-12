@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jxmrqn3a6qn"]
+
+[ext_resource type="PackedScene" uid="uid://cl4cwdm8eexej" path="res://biting-ball/used.tscn" id="1_h47ub"]
+[ext_resource type="PackedScene" uid="uid://buahyeopbomvq" path="res://biting-ball/player.tscn" id="2_an4ps"]
+
+[node name="World" type="Node2D"]
+
+[node name="Used" parent="." instance=ExtResource("1_h47ub")]
+position = Vector2(581, 358)
+
+[node name="Player" parent="." instance=ExtResource("2_an4ps")]
+position = Vector2(1116, 625)

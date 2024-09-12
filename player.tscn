@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://buahyeopbomvq"]
+
+[ext_resource type="Texture2D" uid="uid://18450n4qj22j" path="res://biting-ball/BlackBall.png" id="1_lo5lu"]
+[ext_resource type="Script" path="res://biting-ball/player.gd" id="1_lwat2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kvkmm"]
+radius = 99.0404
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfrwo"]
+atlas = ExtResource("1_lo5lu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wr5mb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfrwo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_lwat2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kvkmm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.96875, 2.96875)
+sprite_frames = SubResource("SpriteFrames_wr5mb")
